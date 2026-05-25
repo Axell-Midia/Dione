@@ -2,14 +2,15 @@ import { useState } from "react";
 
 type ButtonProps = {
   children?: React.ReactNode;
-  disabled?: boolean;
+  onClick?: () => void;
 };
 
-export const Button = ({ children }: ButtonProps) => {
+export const Button = ({ children, onClick }: ButtonProps) => {
   const [count, setCount] = useState(0);
 
   const handleClick = () => {
-    setCount(count + 1);
+    setCount((prevCount) => prevCount + 1);
+    onClick?.();
   };
 
   return (
