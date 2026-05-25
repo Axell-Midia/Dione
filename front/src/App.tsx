@@ -9,10 +9,7 @@ function App() {
     <>
       <section id="center">
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
+          <h1 className="text-2xl font-bold italic">Get started</h1>
         </div>
         <Input placeholder="Enter your text here" />
         <Button>Click me</Button>
